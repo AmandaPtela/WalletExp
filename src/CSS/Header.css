@@ -11,9 +11,9 @@
 }
 
 .header-off {
-  color: rgb(255, 232, 127);
+  color: transparent;
   font-size: 25px;
-  background-color: blueviolet;
+  background-color: transparent;
   display: flex;
   height: 80px;
   width: 100vw;
