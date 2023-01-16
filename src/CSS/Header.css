@@ -15,7 +15,7 @@
   font-size: 25px;
   background-color: transparent;
   display: flex;
-  height: 80px;
+  height: 0;
   width: 100vw;
   justify-content: center;
   align-items: center;
