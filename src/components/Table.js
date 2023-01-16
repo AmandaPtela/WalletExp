@@ -20,8 +20,7 @@ class Table extends Component {
             <th className="titles">Câmbio</th>
             <th className="titles titles-curtos">Valor convertido</th>
             <th className="titles titles-curtos">Moeda de conversão</th> */}
-            <th className="titles-btn">Editar</th>
-            <th className="titles-btn">Excluir</th>
+            <th className="titles-btn">Editar | Excluir</th>
           </tr>
         </thead>
         <tbody id="title-body-area">
@@ -30,8 +29,8 @@ class Table extends Component {
               <tr key={ index } id="body-table">
                 <td className="bodies">{ i.description }</td>
                 <td className="bodies bodies-curtos">{ i.tag }</td>
-                <td className="bodies bodies-special">{ i.method }</td>
-                <td className="bodies bodies-curtos">{ Number(i.value).toFixed(n) }</td>
+                <td className="bodies">{ i.method }</td>
+                <td className="bodies bodies-special">{ Number(i.value).toFixed(n) }</td>
 {/*                 <td className="bodies bodies-curtos">{ i.currency }</td> */}
                 {/* <td className="bodies">{ i.exchangeRates[i.currency].name}</td>
                 <td className="bodies bodies-curtos-conv">{ Number(i.value * i.exchangeRates[i.currency].ask).toFixed(n) }</td>
@@ -47,8 +46,7 @@ class Table extends Component {
                   >
                     Editar
                   </button>
-                  </td>
-                  <td className="bodies-btn">
+
                   <button
                     type="button"
                     className="exclui"
