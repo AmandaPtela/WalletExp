@@ -1,7 +1,7 @@
 .login {
-  background-color: rgba(214, 213, 210, 0.952);
-  width: 40%;
-  height: 45%;
+  background-color: blueviolet;
+  width: 340px;
+  height: 260px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -11,7 +11,7 @@
 .form {
   justify-content: space-evenly;
   height: 100%;
-  padding: 2% 0 2% 0;
+  width: 100%;
 }
 
 #login-form-title-area {
@@ -20,8 +20,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(39, 27, 27);
-  font-size: larger;
+  color: rgb(255, 232, 127);
+  font-size: 25px;
 }
 
 #form-inputs-area {
@@ -33,30 +33,83 @@
   width: 100%;
 }
 
+.label-input {
+  height: 35px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: rgb(255, 232, 127);
+}
+
 .input-login {
   height: 30px;
-  width: 80%;
+  width: 74%;
   border-radius: 2em;
   outline: none;
   border: none;
-  text-align: center;
+  border-bottom: solid 0.3ch rgb(24, 24, 23);
+  text-align: left;
+  padding-left: 10px;
+  font-size: 15px;
+  background-color: rgba(248, 248, 248, 0.932);
 }
 
 .input-login:focus {
   border-radius: 2em;
   outline: none;
-  border: red solid 0.1ch;
-  text-align: center;
-  transform: scale(1.1);
+  text-align: left;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.input-login-ok, .input-pass-ok {
+  height: 30px;
+  width: 77%;
+  border-radius: 2em;
+  outline: none;
+  border: none;
+  border-bottom: solid 0.3ch rgb(68, 209, 91);
+  text-align: left;
+  padding-left: 10px;
+  font-size: 15px;
 }
 
 #login-btn {
   height: 30px;
   width: 100px;
   border-radius: 2em;
+  font-weight: 500;
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  margin-top: 10px;
 }
 
-#login-btn:hover {
+#login-btn-active {
+  height: 30px;
+  width: 100px;
+  border-radius: 2em;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  color:rgb(255, 232, 127);
+  cursor: pointer;
   transform: scale(1.1);
-  color: black;
+  margin-top: 10px;
+}
+
+#login-btn-active:hover {
+  height: 30px;
+  width: 100px;
+  border-radius: 2em;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  color:rgb(255, 232, 127);
+  cursor: pointer;
+  transform: scale(1.5);
+  margin-top: 10px;
 }

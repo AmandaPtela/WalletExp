@@ -45,32 +45,43 @@ class Login extends React.Component {
             <span>WalletExp</span>
           </div>
           <div id="form-inputs-area">
-            <input
-              className="input-login email-login"
-              data-testid="email-input"
-              name="emailOk"
-              value={ emailOk }
-              type="text"
-              placeholder="digite seu email"
-              onChange={ this.handleChange }
+            <label htmlFor='email-login'
+            className="label-input">Email
+              <input
+                id="email-login"
+                className={ !emailOk ?  "input-login email-login" : "input-login-ok" }
+                data-testid="email-input"
+                name="emailOk"
+                value={ emailOk }
+                type="text"
+                placeholder="email@email.com"
+                onChange={ this.handleChange }
               />
-            <input
-              className="input-login pass-login"
-              data-testid="password-input"
-              name="passOk"
-              value={ passOk }
-              type="password"
-              placeholder="digite sua senha"
-              onChange={ this.handleChange }
-            />
+            </label>
+            <label
+            htmlFor='pass-login'
+            className="label-input">Senha 
+              <input
+                id="pass-login"
+                className={ !passOk ?  "input-login pass-login" : "input-pass-ok" }
+                data-testid="password-input"
+                name="passOk"
+                value={ passOk }
+                type="password"
+                placeholder="digite sua senha"
+                onChange={ this.handleChange }
+              />
+            </label>
             <Link to="/carteira">
               <button
-                id="login-btn"
+                id={passOk ? "login-btn-active" :"login-btn"}
                 type="submit"
-                onClick={ () => this.setState({
+                onClick={ () => {
+                  this.setState({
                   emailOk: '',
                   passOk: '',
-                }, dispatch({ type: 'login', value: emailOk })) }
+                }, 
+                dispatch({ type: 'login', value: emailOk })) } }
                 disabled={ buttonDisabled }
                 >
                 Entrar

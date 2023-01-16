@@ -1,40 +1,24 @@
 .header {
   align-items: center;
-  color: rgb(39, 39, 39);
-  background-color: rgb(226, 125, 43);
+  color: rgb(255, 232, 127);
+  background-color: blueviolet;
   display: flex;
   flex-direction: row;
   height: 80px;
   justify-content: space-between;
   text-align: center;
+  width: 100vw;
 }
 
 .header-off {
-  color: black;
+  color: rgb(255, 232, 127);
+  font-size: 25px;
   background-color: blueviolet;
   display: flex;
   height: 80px;
+  width: 100vw;
   justify-content: center;
   align-items: center;
-}
-
-.login {
-  display: flex;
-  justify-content: center;
-}
-
-.form {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.carteira {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
 #logo-header {
