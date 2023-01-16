@@ -8,15 +8,15 @@ import '../CSS/Home.css';
 class Home extends React.Component {
   render() {
     return (
-      <>
+      <div id="home">
         <Header />
-        <div id="login-area">
+        <div id="main-content">
           <Routes>
             <Route path="/" exact element=<Login /> />
             <Route path="/carteira" element=<Wallet /> />
           </Routes>
         </div>
-      </>
+      </div>
     );
   }
 }
