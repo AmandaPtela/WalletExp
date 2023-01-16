@@ -1,6 +1,6 @@
 # Boas vindas ao repositório do projeto WalletExp!
 ---
-* Projeto em construção *
+  Projeto em construção :warning:
 
 Este projeto tem como objetivo auxiliar na organização de gastos, onde o usuário consegue:
 
