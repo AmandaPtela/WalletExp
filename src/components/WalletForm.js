@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import '../CSS/WalletForm.css';
+import notification from './notification';
+import { ToastContainer  } from 'react-toastify';
 
 class WalletForm extends React.Component {
   state = {
@@ -111,76 +113,85 @@ class WalletForm extends React.Component {
       return (
         <div className="wallet-form-area">
           <div className="wallet-form">
-            <input
-              className="wallet-form-input valor"
-              data-testid="value-input"
-              placeholder="Valor da despesa"
-              maxLength={8}
-              name="Evalue"
-              value={ Evalue }
-              onChange={ this.handleValor }
-            />
-            <input
-              className="wallet-form-input"
-              data-testid="description-input"
-              name="Edescription"
-              maxLength={25}
-              placeholder="Descrição da despesa"
-              onChange={ this.handleValor }
-              value={ Edescription }
-            />
-            <select
-              data-testid="currency-input"
-              name="EcurrencyCopy"
-              onChange={ this.handleValor }
-            >
-              {currencies
-                .map((item, i) => (
-                  <option
-                    key={ i }
-                    className="currency-input"
-                  >
-                    { item }
-                  </option>
-                ))}
-            </select>
-            <select
-              data-testid="method-input"
-              name="Emethod"
-              onChange={ this.handleValor }
-            >
-              <option>Dinheiro</option>
-              <option>Cartão de crédito</option>
-              <option>Cartão de débito</option>
-            </select>
-            <select
-              data-testid="tag-input"
-              name="Etag"
-              onChange={ this.handleValor }
-            >
-              <option>Alimentação</option>
-              <option>Lazer</option>
-              <option>Trabalho</option>
-              <option>Transporte</option>
-              <option>Saúde</option>
-            </select>
+            <label className="label" htmlFor="input-form-valor">
+              Valor
+              <input
+                id="input-form-valor"
+                className="wallet-form-input valor"
+                data-testid="value-input"
+                placeholder="2.00"
+                maxLength={8}
+                name="Evalue"
+                value={ Evalue.replace(',', '.') }
+                onChange={ this.handleValor }
+              />
+            </label>
+            <label className="label" htmlFor="input-form-desc">
+              Descrição da despesa  
+              <input
+                id="input-form-desc"
+                className="wallet-form-input desc"
+                data-testid="description-input"
+                name="Edescription"
+                maxLength={25}
+                placeholder="Supermercado do mês"
+                onChange={ this.handleValor }
+                value={ Edescription }
+              />
+            </label>
+            <label className="label" htmlFor="input-form-desc">
+              Forma de Pagamento 
+              <select
+                id="input-form-pag"
+                className="select-input-pag"
+                data-testid="method-input"
+                name="Emethod"
+                onChange={ this.handleValor }
+              >
+                <option>Dinheiro</option>
+                <option>Cartão de crédito</option>
+                <option>Cartão de débito</option>
+              </select>
+            </label>
+            <label className="label" htmlFor="input-form-desc">
+              Categoria 
+              <select
+                id="input-form-tag"
+                className="select-input-tag"
+                data-testid="tag-input"
+                name="Etag"
+                onChange={ this.handleValor }
+                >
+                <option>Alimentação</option>
+                <option>Lazer</option>
+                <option>Trabalho</option>
+                <option>Transporte</option>
+                <option>Saúde</option>
+              </select>
+              </label>
             { editor
               ? (
-                <button
-                  value={ idEdit }
-                  type="button"
-                  onClick={ this.editExpense }
-                >
-                  Editar despesa
-                </button>
+                <div id="btn-area">
+                  <button
+                    className="btn-form"
+                    value={ idEdit }
+                    type="button"
+                    onClick={ this.editExpense }
+                  >
+                    Editar despesa
+                  </button>
+                </div>
               )
               : (
-                <button
-                  type="button"
-                  onClick={ this.addGasto }
-                >
-                  Adicionar despesa
-                </button>
+                <div id="btn-area">
+                  <button
+                    className="btn-form"
+                    type="button"
+                    onClick={ this.addGasto }
+                    >
+                    Adicionar despesa
+                  </button>
+                </div>
               ) }
           </div>
         </div>

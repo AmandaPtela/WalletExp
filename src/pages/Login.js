@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import '../CSS/Login.css';
 import '../CSS/Header.css';
+import notification from '../components/notification';
 
 // Feito com consulta ao https://serfrontend.com/blog/redux-com-react-para-iniciantes/index.html
 // https://react-redux.js.org/using-react-redux/connect-mapdispatch
@@ -48,6 +49,7 @@ class Login extends React.Component {
             <label htmlFor='email-login'
             className="label-input">Email
               <input
+                required={true}
                 id="email-login"
                 className={ !emailOk ?  "input-login email-login" : "input-login-ok" }
                 data-testid="email-input"
@@ -76,13 +78,14 @@ class Login extends React.Component {
               <button
                 id={passOk ? "login-btn-active" :"login-btn"}
                 type="submit"
+                disabled={ buttonDisabled }
                 onClick={ () => {
                   this.setState({
-                  emailOk: '',
-                  passOk: '',
-                }, 
-                dispatch({ type: 'login', value: emailOk })) } }
-                disabled={ buttonDisabled }
+                    emailOk: '',
+                    passOk: '',
+                  }, 
+                  notification('Login bem sucedido'),
+                  dispatch({ type: 'login', value: emailOk })) } }
                 >
                 Entrar
               </button>

@@ -13,14 +13,15 @@ class Table extends Component {
         <thead id="title-table-area">
           <tr id="titles-table">
             <th className="titles">Descrição</th>
-            <th className="titles titles-curtos">Tag</th>
+            <th className="titles titles-curtos">Categoria</th>
             <th className="titles ">Forma de pagamento</th>
             <th className="titles titles-curtos">Valor</th>
-            <th className="titles titles-curtos">Moeda</th>
+            {/* <th className="titles titles-curtos">Moeda</th>
             <th className="titles">Câmbio</th>
             <th className="titles titles-curtos">Valor convertido</th>
-            <th className="titles titles-curtos">Moeda de conversão</th>
-            <th className="titles-btn">Editar/Excluir</th>
+            <th className="titles titles-curtos">Moeda de conversão</th> */}
+            <th className="titles-btn">Editar</th>
+            <th className="titles-btn">Excluir</th>
           </tr>
         </thead>
         <tbody id="title-body-area">
@@ -31,10 +32,10 @@ class Table extends Component {
                 <td className="bodies bodies-curtos">{ i.tag }</td>
                 <td className="bodies bodies-special">{ i.method }</td>
                 <td className="bodies bodies-curtos">{ Number(i.value).toFixed(n) }</td>
-                <td className="bodies bodies-curtos">{ i.currency }</td>
-                <td className="bodies">{ i.exchangeRates[i.currency].name}</td>
+{/*                 <td className="bodies bodies-curtos">{ i.currency }</td> */}
+                {/* <td className="bodies">{ i.exchangeRates[i.currency].name}</td>
                 <td className="bodies bodies-curtos-conv">{ Number(i.value * i.exchangeRates[i.currency].ask).toFixed(n) }</td>
-                <td className="bodies bodies-curtos">{ Number(i.exchangeRates[i.currency].ask).toFixed(n) }</td>
+                <td className="bodies bodies-curtos">{ Number(i.exchangeRates[i.currency].ask).toFixed(n) }</td> */}
                 <td className="bodies-btn">
                   <button
                     className="edita"
@@ -46,6 +47,8 @@ class Table extends Component {
                   >
                     Editar
                   </button>
+                  </td>
+                  <td className="bodies-btn">
                   <button
                     type="button"
                     className="exclui"
