@@ -38,10 +38,9 @@
 
 #total-field {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: baseline;
-  justify-content: space-between;
-  width: 225px;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  width: 170px;
 }
 
 #total {

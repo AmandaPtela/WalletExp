@@ -23,9 +23,9 @@ class Header extends React.Component {
               </span>
               <div id="total-field">
                 <span data-testid="total-field" id="total">
-                  { Number(somaTotal).toFixed(2) }
+                  { `R$ ${Number(somaTotal).toFixed(2)}` }
                 </span>
-                <span data-testid="header-currency-field"> Gasto total: BRL </span>
+                <span data-testid="header-currency-field"> Gasto total </span>
               </div>
             </div>
           </div>
