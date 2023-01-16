@@ -1,0 +1,65 @@
+.header {
+  align-items: center;
+  color: rgb(39, 39, 39);
+  background-color: rgb(226, 125, 43);
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.header-off {
+  color: black;
+  background-color: blueviolet;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.carteira {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#logo-header {
+  width: 200px;
+  font-size: 25px;
+}
+
+#user-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  height: 60%;
+  padding-right: 20px;
+}
+
+#total-field {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 225px;
+}
+
+#total {
+  color: rgb(247, 247, 253);
+}
