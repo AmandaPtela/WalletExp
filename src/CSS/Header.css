@@ -36,6 +36,19 @@
   padding-right: 20px;
 }
 
+#user-field {
+  display: flex;
+  flex-direction: column;
+}
+
+#email-field {
+  color: rgb(247, 247, 253);
+}
+
+#header-user-field {
+  color: rgb(255, 232, 127);
+}
+
 #total-field {
   display: flex;
   flex-direction: column-reverse;

@@ -18,14 +18,17 @@ class Header extends React.Component {
               <span className="header-logo">WalletExp</span>
             </div>
             <div id="user-data">
-              <span data-testid="email-field">
-                Usuário: { user }
-              </span>
+              <div id="user-field">
+                <span id="header-user-field"> Usuário </span>
+                <span id="email-field">
+                  { user }
+                </span>
+              </div>
               <div id="total-field">
                 <span data-testid="total-field" id="total">
                   { `R$ ${Number(somaTotal).toFixed(2)}` }
                 </span>
-                <span data-testid="header-currency-field"> Gasto total </span>
+                <span id="header-currency-field"> Gasto total </span>
               </div>
             </div>
           </div>
