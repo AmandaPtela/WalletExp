@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid red 0.1ch;
 }
 
 #title-table-area {
@@ -96,17 +95,18 @@
 #body-table {
   display: flex;
   justify-content: space-around;
-  width: 99vw;
+  width: 98vw;
 }
 
 #title-body-area {
   height: 100%;
-  width: 99vw;
+  width: 99.7vw;
   font-size: 14px;
   border-radius: 1ch;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   overflow-y: auto;
 }
 
