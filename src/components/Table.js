@@ -12,7 +12,7 @@ class Table extends Component {
       <div id="table-wallet">
         <thead id="title-table-area">
           <tr id="titles-table">
-            <th className="titles">Descrição</th>
+            <th className="titles titles-desc">Descrição</th>
             <th className="titles titles-curtos">Categoria</th>
             <th className="titles ">Forma de pagamento</th>
             <th className="titles titles-curtos">Valor</th>

@@ -17,10 +17,18 @@
 }
 
 .titles {
-  width: 245px;
+  width: 240px;
   height: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.titles-desc {
+  width: 230px;
+  height: 40px;
+  display: flex;
+  justify-content: baseline;
   align-items: center;
 }
 
@@ -100,7 +108,7 @@
 #body-table {
   display: flex;
   justify-content: space-around;
-  width: 93%;
+  width: 94%;
 }
 
 #title-body-area {
