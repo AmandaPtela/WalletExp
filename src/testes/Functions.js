@@ -23,6 +23,6 @@ const editar = (id, dispatch) => {
 };
 
 const soma = (despesas) => despesas.reduce((acc, i) => acc
-    + (i.value * i.exchangeRates[i.currency].ask), 0).toFixed(2);
+    + (i.value * 1), 0).toFixed(2);
 
 export { remove, editar, soma };

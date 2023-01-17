@@ -2,8 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import '../CSS/WalletForm.css';
-import notification from './notification';
-import { ToastContainer  } from 'react-toastify';
+
 
 class WalletForm extends React.Component {
   state = {
@@ -109,7 +108,7 @@ class WalletForm extends React.Component {
 
     render() {
       const { Evalue, Edescription } = this.state;
-      const { currencies, editor, idEdit } = this.props;
+      const { editor, idEdit } = this.props;
       return (
         <div className="wallet-form-area">
           <div className="wallet-form">
