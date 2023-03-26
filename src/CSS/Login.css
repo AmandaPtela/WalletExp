@@ -91,7 +91,7 @@
   height: 30px;
   width: 100px;
   border-radius: 2em;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   border: none;
   background-color: transparent;
@@ -105,12 +105,11 @@
   height: 30px;
   width: 100px;
   border-radius: 2em;
-  font-size: 18px;
   font-weight: 500;
   border: none;
   background-color: transparent;
   color:rgb(255, 232, 127);
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.2);
   margin-top: 10px;
 }

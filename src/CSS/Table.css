@@ -7,52 +7,41 @@
 }
 
 #title-table-area {
-  width: 80%;
+  width: 83%;
   font-size: 15px;
   border-radius: 1ch;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
 }
 
 .titles {
-  width: 240px;
+  width: 200px;
   height: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.titles-desc {
-  width: 230px;
-  height: 40px;
-  display: flex;
-  justify-content: baseline;
+  justify-content: space-around;
   align-items: center;
 }
 
 .titles-btn {
-  width: 110px;
-  padding-right: 5px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .titles-curtos {
-  width: 82px;
-  padding-right: 10px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .bodies {
-  border-radius: 5ch;
+  border-radius: 2ch;
   height: 35px;
-  width: 240px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,34 +52,45 @@
 }
 
 .bodies-curtos {
-  width: 110px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(246, 248, 250);
-  border-radius: 1ch;
+  border-radius: 2ch;
   color: rgb(63, 62, 62);
   font-size: 14px;
 }
 
 .bodies-special {
-  width: 90px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  border-radius: 2ch;
+  color: rgb(63, 62, 62);
+}
+
+#bodie-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 120px;
+  font-size: 14px;
   background-color: rgb(246, 248, 250);
-  border-radius: 1ch;
+  border-radius: 2ch;
   color: rgb(63, 62, 62);
 }
 
 .bodies-btn {
   height: 35px;
-  width: 128px;
+  width: 200px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 1ch;
+  border-radius: 2ch;
   display: flex;
   font-size: 14px;
 }
@@ -101,19 +101,18 @@
   width: 100%;
   background-color: blueviolet;
   color: aliceblue;
-  padding-right: 5px;
   border-radius: 2ch;
 }
 
 #body-table {
   display: flex;
   justify-content: space-around;
-  width: 94%;
+  width: 100%;
 }
 
 #title-body-area {
-  height: 310px;
-  width: 88%;
+  height: 320px;
+  width: 83%;
   font-size: 14px;
   border-radius: 1ch;
   display: flex;
@@ -124,6 +123,7 @@
 }
 
 .edita, .exclui {
+  width: 80px;
   height: 35px;
   font-size: 14px;
   font-weight: 600;

@@ -26,7 +26,7 @@ class Table extends Component {
                 <td className="bodies">{ i.description }</td>
                 <td className="bodies bodies-curtos">{ i.tag }</td>
                 <td className="bodies">{ i.method }</td>
-                <td className="bodies bodies-special">{ (i.value).replace('.', ',') }</td>
+                <td className="bodies-special"><span id="bodie-value">{ (i.value).replace('.', ',') }</span></td>
                 <td className="bodies-btn">
                   <button
                     className="edita"

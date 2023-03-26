@@ -76,7 +76,7 @@ class Login extends React.Component {
             </label>
             <Link to="/carteira">
               <button
-                id={passOk ? "login-btn-active" :"login-btn"}
+                id={passOk.length >= 6 ? "login-btn-active" :"login-btn"}
                 type="submit"
                 disabled={ buttonDisabled }
                 onClick={ () => {

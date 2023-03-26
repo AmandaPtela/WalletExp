@@ -139,7 +139,7 @@ class WalletForm extends React.Component {
               />
             </label>
             <label className="label" htmlFor="input-form-desc">
-              Forma de Pagamento 
+              Pagamento em:
               <select
                 id="input-form-pag"
                 className="select-input-pag"
