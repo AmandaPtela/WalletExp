@@ -1,5 +1,6 @@
 <strong> WalletExp </strong><br />
-Versão 2 do projeto 'TrybeWallet' realizado na Trybe<br>
+_Versão 2 do projeto 'TrybeWallet' realizado na Trybe_<br>
+
 O projeto consiste numa aplicação que simula uma carteira de gastos, onde é possível o usuário adicionar, editar e apagar itens na lista de gastos. <br>
 Foi desenvolvido utilizando _HTML, CSS, React, React Router, Redux_.
 
