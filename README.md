@@ -1,31 +1,16 @@
-# Boas vindas ao repositório do projeto WalletExp!
----
-  Projeto em construção :warning:
+<strong> WalletExp </strong><br />
+Versão 2 do projeto 'TrybeWallet' realizado na Trybe<br>
+O projeto consiste numa aplicação que simula uma carteira de gastos, onde é possível o usuário adicionar, editar e apagar itens na lista de gastos. <br>
+Foi desenvolvido utilizando _HTML, CSS, React, React Router, Redux_.
 
-Este projeto tem como objetivo auxiliar na organização de gastos, onde o usuário consegue:
-
-  * Adicionar gastos;
-
-  * Editar e remover uma despesa já existente;
-
-  * Visualizar todas as despesas adicionadas;
+  <summary><strong>Rodando o projeto localmente‼️ </strong></summary><br />
   
-  * Filtrar as despesas;
-
----
-
-# Habilidades
-
-  * Ler o estado de um componente e usá-lo para alterar o que exibimos no browser
-
-  * Inicializar um componente de classe, dando a ele um estado pré-definido
-
-  * Atualizar o estado de um componente
-
-  * Capturar eventos utilizando a sintaxe do React
-
-  * Criar formulários utilizando sintaxe JSX com as tags: `input`, `textarea`, `select`, `form`, `checkbox`
-
-  * Genrenciar os estados da aplicação com Redux
-
----
+  1. Clone o repositório
+   - `git clone git@github.com:AmandaPtela/WalletExp.git`
+    
+  2. Instale as dependências e inicialize o projeto
+  - Instale as dependências:
+    - `npm install`
+  - Inicialize o projeto:
+    - `npm start` (uma nova página deve abrir no seu navegador com o projeto)
+  
