@@ -1,7 +1,7 @@
 .header {
   align-items: center;
-  color: rgb(255, 232, 127);
-  background-color: blueviolet;
+  color: #0f3433;
+  background-color: #abd1c6;
   display: flex;
   flex-direction: row;
   height: 80px;
@@ -40,7 +40,7 @@
 }
 
 #header-user-field {
-  color: rgb(255, 232, 127);
+  color: #0f3433;
 }
 
 #total-field {

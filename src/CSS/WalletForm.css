@@ -17,7 +17,7 @@
   width: 70px;
   height: 34px;
   border-radius: 1ch;
-  border: none;
+  border: solid 0.3ch #001e1d;
   text-align: center;
   margin-top: 5px;
   font-size: 14.5px;
@@ -28,7 +28,7 @@
   width: 200px;
   height: 34px;
   border-radius: 1ch;
-  border: none;
+  border: solid 0.3ch #001e1d;
   text-align: center;
   margin-top: 5px;
   font-size: 14.5px;
@@ -40,7 +40,7 @@
   width: 150px;
   height: 34px;
   border-radius: 1ch;
-  border: none;
+  border: solid 0.3ch #001e1d;
   font-size: 14.5px;
   color: rgb(46, 45, 45);
   margin-top: 5px;
@@ -52,8 +52,7 @@
   width: 106px;
   height: 34px;
   border-radius: 1ch;
-  border: none;
-  color: rgb(46, 45, 45);
+  border: solid 0.3ch #001e1d;  color: rgb(46, 45, 45);
   outline: none;
   margin-top: 5px;
   font-size: 14.5px;
@@ -61,7 +60,7 @@
 
 .label {
   font-size: 19px;
-  color: rgb(59, 59, 59);
+  color: #f9bc60;
 }
 
 #btn-area {
@@ -76,13 +75,16 @@
   height: 35px;
   width: 150px;
   border-radius: 1ch;
-  border: none;
+  border: solid 0.3ch #001e1d;
   font-size: 15px;
-  color: rgb(255, 232, 127);
-  background-color: blueviolet;
+  color: #0f3433;
+  background-color: #f9bc60;
 }
 
 .btn-form:hover {
-  color: rgb(26, 170, 180);
-  background-color: rgb(255, 232, 127);
+  border: solid 0.3ch #001e1d;
+  background-color: #f9bc60;
+  font-size: 16px;
+  transform: scale(1.1);
+  transition: 0.2s;
 }
