@@ -81,9 +81,10 @@
   width: 100px;
   border-radius: 2em;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   border: none;
-  color: #001e1d;
+  background-color: transparent;
+  color: #004643;
   margin-top: 10px;
 }
 
@@ -92,9 +93,9 @@
   width: 100px;
   border-radius: 2em;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   border: none;
-  background-color: #0f3433;
+  background-color: #e16162;
   color:#f9bc60;
   cursor: pointer;
   margin-top: 10px;
