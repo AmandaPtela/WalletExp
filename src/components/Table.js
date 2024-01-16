@@ -9,7 +9,7 @@ class Table extends Component {
     const { despesas, dispatch, valorTotal } = this.props;
     // const n = 2;
     return (
-      <div id="table-wallet">
+      <table id="table-wallet">
         <thead id="title-table-area">
           <tr id="titles-table">
             <th className="titles titles-desc">Descrição</th>
@@ -54,7 +54,7 @@ class Table extends Component {
             ))
           }
         </tbody>
-      </div>
+      </table>
     );
   }
 }
@@ -65,7 +65,7 @@ const mapStateToProps = (state) => ({
 });
 
 Table.propTypes = {
-  despesas: PropTypes.arrayOf(PropTypes.string).isRequired,
+  despesas: PropTypes.arrayOf(PropTypes.object).isRequired,
   dispatch: PropTypes.func.isRequired,
   valorTotal: PropTypes.number.isRequired,
 };
