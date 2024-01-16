@@ -6,7 +6,6 @@ import rootReducer from './reducers';
 const storeGeral = createStore(
   rootReducer, composeWithDevTools(applyMiddleware(thunk)),
 );
-console.log(storeGeral.getState());
 
 if (window.Cypress) {
   window.store = storeGeral;
