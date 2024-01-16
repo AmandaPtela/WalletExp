@@ -11,9 +11,33 @@
 
 #main-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   text-align: center;
   height: 100%;
-  width: 95%;
+  width: 98%;
+}
+
+#btn-logoff {
+  display: flex;
+  width: 7%;
+  height: fit-content;
+  padding-bottom: 7px;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+button {
+  background-color: #f9bc60;
+  border: none;
+  border-radius: 0.5em;
+  color: #0f3433;
+  cursor: pointer;
+  font-size: 20px;
+  width: 80px;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
