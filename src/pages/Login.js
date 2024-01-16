@@ -38,6 +38,8 @@ class Login extends React.Component {
   render() {
     const { buttonDisabled, emailOk, passOk } = this.state;
     const { dispatch } = this.props;
+    const currentUser = JSON.parse(localStorage.getItem('userData')).user; 
+    console.log(currentUser); //para carregar os dados do usuário específico
 
     return (
       <div className="login">
@@ -47,46 +49,48 @@ class Login extends React.Component {
           </div>
           <div id="form-inputs-area">
             <label htmlFor='email-login'
-            className="label-input">Email
+              className="label-input">Email
               <input
                 required={true}
                 id="email-login"
-                className={ !emailOk ?  "input-login email-login" : "input-login-ok" }
+                className={!emailOk ? "input-login email-login" : "input-login-ok"}
                 data-testid="email-input"
                 name="emailOk"
-                value={ emailOk }
+                value={emailOk}
                 type="text"
                 placeholder="email@email.com"
-                onChange={ this.handleChange }
+                onChange={this.handleChange}
               />
             </label>
             <label
-            htmlFor='pass-login'
-            className="label-input">Senha 
+              htmlFor='pass-login'
+              className="label-input">Senha
               <input
                 id="pass-login"
-                className={ !passOk ?  "input-login pass-login" : "input-pass-ok" }
+                className={!passOk ? "input-login pass-login" : "input-pass-ok"}
                 data-testid="password-input"
                 name="passOk"
-                value={ passOk }
+                value={passOk}
                 type="password"
                 placeholder="digite sua senha"
-                onChange={ this.handleChange }
+                onChange={this.handleChange}
               />
             </label>
             <Link to="/carteira">
               <button
-                id={passOk.length >= 6 ? "login-btn-active" :"login-btn"}
+                id={passOk.length >= 6 ? "login-btn-active" : "login-btn"}
                 type="submit"
-                disabled={ buttonDisabled }
-                onClick={ () => {
+                disabled={buttonDisabled}
+                onClick={() => {
+                  localStorage.setItem('userData', JSON.stringify({ user: emailOk, data: null }));
+                  notification('Login bem sucedido');
+                  dispatch({ type: 'login', value: emailOk });
                   this.setState({
                     emailOk: '',
                     passOk: '',
-                  }, 
-                  notification('Login bem sucedido'),
-                  dispatch({ type: 'login', value: emailOk })) } }
-                >
+                  });
+                }}
+              >
                 Entrar
               </button>
             </Link>
