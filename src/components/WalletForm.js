@@ -16,6 +16,7 @@ class WalletForm extends React.Component {
 
   componentDidMount() {
     const { dispatch } = this.props;
+    //lista de moedas
     const fetchApi = () => {
       const apiMoedas = 'https://economia.awesomeapi.com.br/json/all';
       fetch(apiMoedas)
@@ -49,7 +50,7 @@ class WalletForm extends React.Component {
     };
 
     addGasto = () => {
-      const { dispatch, exchangeRatesP, expense } = this.props;
+      const { dispatch, despesas } = this.props;
       const { Evalue, Edescription, EcurrencyCopy, Emethod, Etag, Eid } = this.state;
       dispatch({ type: 'editExpense', value: false });
       this.setState((prevState) => ({ Eid: prevState.Eid + 1 }));
@@ -60,19 +61,18 @@ class WalletForm extends React.Component {
         currency: EcurrencyCopy,
         method: Emethod,
         tag: Etag,
-        exchangeRates: exchangeRatesP,
       };
       dispatch({
         type: 'walletExpense',
-        value: [...expense, expenses],
+        value: [...despesas, expenses],
       });
-      const fetchApi = async () => {
+/*       const fetchApi = async () => {
         const apiMoedas = 'https://economia.awesomeapi.com.br/json/all';
         const response = await fetch(apiMoedas);
         const data = await response.json();
         return data;
       };
-      fetchApi();
+      fetchApi(); */
 
       this.setState({
         Evalue: '',
@@ -81,10 +81,10 @@ class WalletForm extends React.Component {
     }
 
     editExpense = () => {
-      const { expense, exchangeRatesP, dispatch, idEdit } = this.props;
+      const { despesas, dispatch, idEdit } = this.props;
       const { Evalue, Edescription, Etag, Emethod, EcurrencyCopy } = this.state;
 
-      const posEdit = expense.filter(({ id }) => id !== idEdit);
+      const posEdit = despesas.filter(({ id }) => id !== idEdit);
 
       dispatch({
         type: 'edit',
@@ -96,7 +96,6 @@ class WalletForm extends React.Component {
             currency: EcurrencyCopy,
             method: Emethod,
             tag: Etag,
-            exchangeRates: exchangeRatesP,
           }, ...posEdit],
       });
       dispatch({ type: 'editExpense', value: false });
@@ -199,22 +198,21 @@ class WalletForm extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  expense: state.wallet.expenses,
+  despesas: state.wallet.expenses,
   currencies: state.wallet.currencies,
   exchange: state.wallet.exchange,
-  exchangeRatesP: state.wallet.exchangeRates,
+  //exchangeRatesP: state.wallet.exchangeRates,
   editor: state.wallet.editor,
   idEdit: state.wallet.idToEdit,
 });
 
 WalletForm.propTypes = {
-  expense: PropTypes.arrayOf(PropTypes.array).isRequired,
+  despesas: PropTypes.arrayOf(PropTypes.object).isRequired,
   currencies: PropTypes.arrayOf(PropTypes.string).isRequired,
   dispatch: PropTypes.func.isRequired,
-  exchangeRatesP: PropTypes.arrayOf(PropTypes.object).isRequired,
+  //exchangeRatesP: PropTypes.arrayOf(PropTypes.object).isRequired,
   editor: PropTypes.bool.isRequired,
   idEdit: PropTypes.number.isRequired,
-
 };
 
 export default connect(mapStateToProps)(WalletForm);
