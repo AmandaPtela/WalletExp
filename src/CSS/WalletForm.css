@@ -7,7 +7,7 @@
 
 .wallet-form {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 65%;
   height: 80px;
@@ -38,10 +38,11 @@
 .select-input-pag {
   text-align: center;
   width: 150px;
-  height: 34px;
+  height: 40px;
   border-radius: 1ch;
   border: solid 0.3ch #001e1d;
   font-size: 14.5px;
+  font-weight: 500;
   color: rgb(46, 45, 45);
   margin-top: 5px;
   outline: none;
@@ -49,18 +50,25 @@
 
 .select-input-tag {
   text-align: center;
-  width: 108px;
-  height: 34px;
+  width: 110px;
+  height: 40px;
   border-radius: 1ch;
-  border: solid 0.3ch #001e1d;  color: rgb(46, 45, 45);
+  border: solid 0.3ch #001e1d;
+  color: rgb(46, 45, 45);
   outline: none;
   margin-top: 5px;
   font-size: 14.5px;
+  font-weight: 500;
 }
 
 .label {
   font-size: 19px;
+  font-weight: 400;
   color: #f9bc60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #btn-area {
@@ -77,6 +85,7 @@
   border-radius: 1ch;
   border: solid 0.3ch #001e1d;
   font-size: 15px;
+  font-weight: 500;
   color: #0f3433;
   background-color: #f9bc60;
 }
