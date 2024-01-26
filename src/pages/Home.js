@@ -23,7 +23,7 @@ class Home extends React.Component {
           {logged ?
             <div id="btn-logoff">
               <Link to="/">
-                <button onClick={() => {
+                <button id="logoff-btn" onClick={() => {
                   notification('Sessão encerrada');
                   dispatch({ type: 'logout' });
                 }}>Logout</button>

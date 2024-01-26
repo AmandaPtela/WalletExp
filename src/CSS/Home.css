@@ -28,7 +28,7 @@
   align-self: flex-end;
 }
 
-button {
+#logoff-btn {
   background-color: #f9bc60;
   border: none;
   border-radius: 0.5em;
