@@ -35,11 +35,14 @@ class Login extends React.Component {
     }
   }
 
+  currentUser = () => {
+    const currentUser = JSON.parse(localStorage.getItem('userData')).user; 
+    console.log(currentUser); //para carregar os dados do usuário específico
+  }
+
   render() {
     const { buttonDisabled, emailOk, passOk } = this.state;
     const { dispatch } = this.props;
-    const currentUser = JSON.parse(localStorage.getItem('userData')).user; 
-    console.log(currentUser); //para carregar os dados do usuário específico
 
     return (
       <div className="login">

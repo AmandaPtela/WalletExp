@@ -11,7 +11,7 @@ class Header extends React.Component {
     const somaTotal = soma(despesas, dispatch);
     dispatch({ type: 'somaTotal', value: Number(somaTotal) });
 
-    const user = localStorage.getItem('User');
+    const user = JSON.parse(localStorage.getItem('userData')).user;
     
     return (
       (logged && user && user.length > 0)
