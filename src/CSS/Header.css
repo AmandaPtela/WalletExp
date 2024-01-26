@@ -42,6 +42,7 @@
 }
 
 #email-field {
+  font-weight: 500;
   color: rgb(247, 247, 253);
 }
 
@@ -61,4 +62,5 @@
 
 #total {
   color: rgb(247, 247, 253);
+  font-weight: 500;
 }
