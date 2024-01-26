@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 2em;
+  font-weight: 500;
 }
 .form {
   justify-content: space-evenly;
@@ -70,7 +71,7 @@
   border-radius: 2em;
   outline: none;
   border: none;
-  border-bottom: solid 0.3ch rgb(68, 209, 91);
+  border-bottom: solid 0.3ch #e16162;
   text-align: left;
   padding-left: 10px;
   font-size: 15px;
